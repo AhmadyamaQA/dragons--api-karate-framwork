@@ -1,7 +1,14 @@
-#Scenario 10
+#Scenario 10:
 #Endpoint = /api/accounts/add-primary-account.
-#This Endpoint is to create new account and data will store in primary_person table.
 #Status Code = 201
+#Assert Email Address
+#Notes:
+#duplicate email not accepted
+#For Gender and maritalStatus You have to use the Predefined values.
+#Once you create Account validate database and take screenshot.
+#FirstName and LastName should be your name.
+#In Request body we don't need id and isNew field (you can remove them).
+@Regression
 Feature: Create Account Test
 
   Background: API Test Setup
@@ -9,7 +16,8 @@ Feature: Create Account Test
     And print result
     And def generatedToken = result.response.token
     Given url "https://tek-insurance-api.azurewebsites.net"
-	@test
+
+  @test
   Scenario: Create Account
     Given path "/api/accounts/add-primary-account"
     And header Authorization = "Bearer "  + generatedToken

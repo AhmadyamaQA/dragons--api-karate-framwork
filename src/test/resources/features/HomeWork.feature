@@ -1,6 +1,12 @@
+@Regression
 Feature: Get Account API
 
-  Background: Setup Test URL
+  #Scenario 9:
+  #Endpoint = /api/accounts/get-account
+  #For primaryPersonId = <One of your accounts already Created
+  #Make sure email address is correct.
+  
+  Background: API Setup steps
     Given url "https://tek-insurance-api.azurewebsites.net"
 
   Scenario: Get API Call with existing account
