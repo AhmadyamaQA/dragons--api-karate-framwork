@@ -6,7 +6,7 @@ Feature: Token Verify Test
 
   Background: Setup Test URL
     Given url "https://tek-insurance-api.azurewebsites.net"
-
+	@Smoke
   Scenario: Verify Valid Token
     And path "/api/token"
     And request {"username": "supervisor","password": "tek_supervisor"}
