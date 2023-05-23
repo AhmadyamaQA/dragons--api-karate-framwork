@@ -7,6 +7,6 @@ public class TestRunner {
 	@Karate.Test
 	public Karate runTests() {
 
-		return Karate.run("classpath:features").tags("regression");
+		return Karate.run("classpath:features").tags("Regression");
 	}
 }
